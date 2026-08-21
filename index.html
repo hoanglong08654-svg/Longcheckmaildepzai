@@ -1,0 +1,1901 @@
+<!<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>longcheckmail · dịch vụ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== CSS ĐẦY ĐỦ (copy toàn bộ) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0b0e14;
+            color: #c8d6e5;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        .snowflake {
+            position: absolute;
+            top: -20px;
+            color: #fff;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            animation: fall linear infinite;
+            user-select: none;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.2;
+            }
+        }
+        .music-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 10000;
+            background: #1f2e3c;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            color: #4dd0e1;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .music-btn:hover {
+            transform: scale(1.1);
+            background: #2a3f4f;
+        }
+        .music-hint {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            color: #78909c;
+            font-size: 0.7rem;
+            background: #131a24;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid #2a3a4a;
+            z-index: 10000;
+            max-width: 200px;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: #131a24;
+            border-radius: 28px;
+            padding: 30px 28px 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid #2a3a4a;
+            position: relative;
+            z-index: 10;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #1f2e3c;
+            padding-bottom: 12px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-area {
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .logo-area.hidden {
+            display: none;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #00e5ff, #00bcd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo small {
+            font-size: 0.9rem;
+            font-weight: 300;
+            background: none;
+            -webkit-text-fill-color: #78909c;
+            color: #78909c;
+        }
+        .contact-mini {
+            font-size: 0.7rem;
+            color: #90a4ae;
+            margin-top: 2px;
+        }
+        .contact-mini i {
+            margin-right: 4px;
+            color: #4dd0e1;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        .hamburger:hover {
+            background: #1f2e3c;
+        }
+        .hamburger .bar {
+            width: 28px;
+            height: 3px;
+            background: #e0f2f1;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+        .hamburger.visible {
+            display: flex;
+        }
+        .hamburger-menu {
+            display: none;
+        html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>longcheckmail · dịch vụ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== CSS ĐẦY ĐỦ (copy toàn bộ) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0b0e14;
+            color: #c8d6e5;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        .snowflake {
+            position: absolute;
+            top: -20px;
+            color: #fff;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            animation: fall linear infinite;
+            user-select: none;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.2;
+            }
+        }
+        .music-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 10000;
+            background: #1f2e3c;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            color: #4dd0e1;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .music-btn:hover {
+            transform: scale(1.1);
+            background: #2a3f4f;
+        }
+        .music-hint {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            color: #78909c;
+            font-size: 0.7rem;
+            background: #131a24;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid #2a3a4a;
+            z-index: 10000;
+            max-width: 200px;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: #131a24;
+            border-radius: 28px;
+            padding: 30px 28px 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid #2a3a4a;
+            position: relative;
+            z-index: 10;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #1f2e3c;
+            padding-bottom: 12px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-area {
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .logo-area.hidden {
+            display: none;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #00e5ff, #00bcd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo small {
+            font-size: 0.9rem;
+            font-weight: 300;
+            background: none;
+            -webkit-text-fill-color: #78909c;
+            color: #78909c;
+        }
+        .contact-mini {
+            font-size: 0.7rem;
+            color: #90a4ae;
+            margin-top: 2px;
+        }
+        .contact-mini i {
+            margin-right: 4px;
+            color: #4dd0e1;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        .hamburger:hover {
+            background: #1f2e3c;
+        }
+        .hamburger .bar {
+            width: 28px;
+            height: 3px;
+            background: #e0f2f1;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+        .hamburger.visible {
+            display: flex;
+        }
+        .hamburger-menu {
+            display: none;
+            position: absolute;
+            top: 115%;
+            left: 0;
+            background: #1f2e3c;
+            border-radius: 16px;
+            padding: 8px 0;
+            min-width: 200px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+            border: 1px solid #2a4a5a;
+            z-index: 200;<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>longcheckmail · dịch vụ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* ===== CSS ĐẦY ĐỦ (copy toàn bộ) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0b0e14;
+            color: #c8d6e5;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        .snowflake {
+            position: absolute;
+            top: -20px;
+            color: #fff;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            animation: fall linear infinite;
+            user-select: none;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.2;
+            }
+        }
+        .music-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 10000;
+            background: #1f2e3c;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            color: #4dd0e1;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .music-btn:hover {
+            transform: scale(1.1);
+            background: #2a3f4f;
+        }
+        .music-hint {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            color: #78909c;
+            font-size: 0.7rem;
+            background: #131a24;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid #2a3a4a;
+            z-index: 10000;
+            max-width: 200px;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background: #131a24;
+            border-radius: 28px;
+            padding: 30px 28px 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            border: 1px solid #2a3a4a;
+            position: relative;
+            z-index: 10;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #1f2e3c;
+            padding-bottom: 12px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-area {
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .logo-area.hidden {
+            display: none;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #00e5ff, #00bcd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo small {
+            font-size: 0.9rem;
+            font-weight: 300;
+            background: none;
+            -webkit-text-fill-color: #78909c;
+            color: #78909c;
+        }
+        .contact-mini {
+            font-size: 0.7rem;
+            color: #90a4ae;
+            margin-top: 2px;
+        }
+        .contact-mini i {
+            margin-right: 4px;
+            color: #4dd0e1;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        .hamburger:hover {
+            background: #1f2e3c;
+        }
+        .hamburger .bar {
+            width: 28px;
+            height: 3px;
+            background: #e0f2f1;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+        .hamburger.visible {
+            display: flex;
+        }
+        .hamburger-menu {
+            display: none;
+       
+        }
+        .hamburger-menu.active {
+            display: block;
+        }
+        .hamburger-menu .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 24px;
+            color: #e0f2f1;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+        .hamburger-menu .menu-item:hover {
+            background: #2a3f4f;
+        }
+        .hamburger-menu .menu-item i {
+            width: 20px;
+            color: #4dd0e1;
+        }
+        .hamburger-menu .menu-item.logout i {
+            color: #f44336;
+        }
+        .hamburger-menu .menu-item.key i {
+            color: #f9a825;
+        }
+        .hamburger-menu .menu-item.unlink-key i {
+            color: #ff9800;
+        }
+        .user-info {
+            display: none;
+            align-items: center;
+            gap: 12px;
+            cursor: default;
+        }
+        .user-info.visible {
+            display: flex;
+        }
+        .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #fff;
+            color: #0b0e14;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 0 0 0 2px #4dd0e1;
+        }
+        .user-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #e0f2f1;
+        }
+        .user-name small {
+            font-size: 0.75rem;
+            color: #78909c;
+            font-weight: 300;
+        }
+        .header-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .lang-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-btn {
+            background: #1f2e3c;
+            border: none;
+            color: #b0bec5;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .lang-btn:hover {
+            background: #2a3f4f;
+        }
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 110%;
+            left: 0;
+            background: #1f2e3c;
+            border-radius: 12px;
+            padding: 6px 0;
+            min-width: 120px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+            z-index: 100;
+            border: 1px solid #2a4a5a;
+        }
+        .lang-dropdown.active {
+            display: block;
+        }
+        .lang-dropdown .lang-option {
+            padding: 8px 20px;
+            color: #e0f2f1;
+            cursor: pointer;
+            transition: 0.15s;
+            font-size: 0.9rem;
+        }
+        .lang-dropdown .lang-option:hover {
+            background: #2a3f4f;
+            color: #fff;
+        }
+        .lang-dropdown .lang-option.active-lang {
+            background: #2a4a5a;
+            color: #4dd0e1;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #2a4a5a;
+            color: #80cbc4;
+            padding: 6px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .btn-outline:hover {
+            background: #1f3a44;
+        }
+        .btn-code {
+            border-color: #f9a825;
+            color: #f9a825;
+        }
+        .btn-code:hover {
+            background: #2a2a1a;
+        }
+        .btn-auth {
+            border-color: #4dd0e1;
+            color: #4dd0e1;
+        }
+        .btn-auth:hover {
+            background: #1a3a44;
+        }
+        .btn-auth.hidden {
+            display: none;
+        }
+        .btn-code.hidden {
+            display: none;
+        }
+        .code-section {
+            display: none;
+            margin: 16px 0 10px;
+            padding: 12px 18px;
+            background: #0f171f;
+            border-radius: 40px;
+            border: 1px solid #3a5a6a;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            transition: 0.2s;
+        }
+        .code-section.visible {
+            display: flex;
+        }
+        .code-section input {
+            flex: 1;
+            min-width: 180px;
+            background: transparent;
+            border: none;
+            color: #e0f2f1;
+            font-size: 1rem;
+            padding: 8px 6px;
+            outline: none;
+        }
+        .code-section input::placeholder {
+            color: #546e7a;
+            font-style: italic;
+        }
+        .code-section .btn-confirm {
+            background: #f9a825;
+            border: none;
+            padding: 8px 30px;
+            border-radius: 40px;
+            font-weight: 700;
+            color: #0b0e14;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .code-section .btn-confirm:hover {
+            background: #fbc02d;
+        }
+        .search-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            background: #0f171f;
+            padding: 16px 20px;
+            border-radius: 40px;
+            border: 1px solid #2a3f4f;
+            margin-bottom: 16px;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .search-box.hidden {
+            display: none !important;
+        }
+        .search-box input {
+            flex: 1;
+            min-width: 200px;
+            background: transparent;
+            border: none;
+            color: #e0f2f1;
+            font-size: 1rem;
+            padding: 8px 6px;
+            outline: none;
+        }
+        .search-box input::placeholder {
+            color: #546e7a;
+            font-style: italic;
+        }
+        .search-box select {
+            background: #0b0e14;
+            border: 1px solid #2a3f4f;
+            border-radius: 12px;
+            color: #e0f2f1;
+            padding: 8px 12px;
+            outline: none;
+            cursor: pointer;
+        }
+        .search-box .btn-check {
+            background: #00acc1;
+            border: none;
+            padding: 10px 34px;
+            border-radius: 40px;
+            font-weight: 700;
+            color: #0b0e14;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .search-box .btn-check:hover {
+            background: #26c6da;
+        }
+        .search-result {
+            display: none;
+            margin: 0 0 24px;
+            padding: 0 4px;
+        }
+        .search-result.active {
+            display: block;
+        }
+        .search-result .result-wrapper {
+            background: #0b0e14;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #1f2e3c;
+            position: relative;
+        }
+        .search-result table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        .search-result th,
+        .search-result td {
+            padding: 10px 16px;
+            text-align: left;
+            border-bottom: 1px solid #1f2e3c;
+        }
+        .search-result th {
+            background: #1a2632;
+            color: #80cbc4;
+            font-weight: 600;
+            width: 35%;
+        }
+        .search-result td {
+            color: #e0f2f1;
+            word-break: break-word;
+        }
+        .search-result .error-msg {
+            color: #f44336;
+            padding: 12px 16px;
+            background: #2a1a1a;
+            border-radius: 12px;
+            border-left: 4px solid #f44336;
+        }
+        .search-result .loading-text {
+            color: #78909c;
+            font-style: italic;
+            padding: 12px;
+        }
+        .search-result .info-msg {
+            color: #4dd0e1;
+            padding: 12px 16px;
+            background: #0a1a2a;
+            border-radius: 12px;
+            border-left: 4px solid #4dd0e1;
+        }
+        .copy-btn {
+            display: inline-block;
+            margin: 12px 16px 16px;
+            padding: 8px 24px;
+            background: #00acc1;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #0b0e14;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+        .copy-btn:hover {
+            background: #26c6da;
+            transform: scale(1.02);
+        }
+        .copy-btn i {
+            margin-right: 6px;
+        }
+        .copy-btn.copied {
+            background: #4caf50;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+        .service-item {
+            background: #1a2632;
+            border-radius: 16px;
+            padding: 16px 10px;
+            text-align: center;
+            border: 1px solid #2a3f4f;
+            transition: 0.15s;
+            cursor: pointer;
+        }
+        .service-item:hover {
+            border-color: #4dd0e1;
+            background: #1f2e3e;
+        }
+        .service-item i {
+            font-size: 1.8rem;
+            color: #4dd0e1;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .service-item span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #b0bec5;
+        }
+        .service-item .badge {
+            background: #2a4a5a;
+            color: #80cbc4;
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 4px;
+        }
+        .contact-row {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #1f2e3c;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #78909c;
+            font-size: 0.9rem;
+        }
+        .contact-row a {
+            color: #4dd0e1;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .contact-row i {
+            margin-right: 6px;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay.active {
+            display: flex;
+        }
+        .modal-box {
+            background: #1a2632;
+            max-width: 420px;
+            width: 90%;
+            padding: 32px 28px;
+            border-radius: 28px;
+            border: 1px solid #4dd0e1;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            animation: fadeIn 0.25s ease;
+            position: relative;
+        }
+        .modal-box .close-modal {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-size: 1.8rem;
+            color: #78909c;
+            cursor: pointer;
+            transition: 0.2s;
+            background: none;
+            border: none;
+        }
+        .modal-box .close-modal:hover {
+            color: #e0f2f1;
+        }
+        .modal-box h2 {
+            color: #e0f2f1;
+            font-size: 1.8rem;
+            margin-bottom: 4px;
+        }
+        .modal-box .sub {
+            color: #90a4ae;
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+        }
+        .modal-box .input-group {
+            text-align: left;
+            margin-bottom: 14px;
+        }
+        .modal-box .input-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #b0bec5;
+            margin-bottom: 4px;
+        }
+        .modal-box .input-group input {
+            width: 100%;
+            padding: 12px 16px;
+            background: #0f171f;
+            border: 1px solid #2a3f4f;
+            border-radius: 12px;
+            color: #e0f2f1;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .modal-box .input-group input:focus {
+            border-color: #4dd0e1;
+        }
+        .modal-box .input-group .error-msg {
+            color: #f44336;
+            font-size: 0.8rem;
+            margin-top: 4px;
+            min-height: 18px;
+        }
+        .modal-box .remember-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 6px 0 18px;
+            font-size: 0.9rem;
+            color: #b0bec5;
+        }
+        .modal-box .remember-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #00bcd4;
+            cursor: pointer;
+        }
+        .modal-box .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: #00bcd4;
+            border: none;
+            border-radius: 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0b0e14;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .modal-box .btn-submit:hover {
+            background: #26c6da;
+            transform: scale(1.02);
+        }
+        .modal-box .switch-link {
+            margin-top: 18px;
+            font-size: 0.95rem;
+            color: #78909c;
+        }
+        .modal-box .switch-link a {
+            color: #4dd0e1;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .modal-box .switch-link a:hover {
+            text-decoration: underline;
+        }
+        .modal-box .key-display {
+            background: #0b0e14;
+            padding: 16px;
+            border-radius: 16px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #4dd0e1;
+            letter-spacing: 2px;
+            margin: 16px 0 20px;
+            border: 1px dashed #4dd0e1;
+        }
+        .modal-box .zalo-contact {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 10px 30px;
+            background: #0088cc;
+            border: none;
+            border-radius: 40px;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+        .modal-box .zalo-contact:hover {
+            background: #0099dd;
+            transform: scale(1.02);
+        }
+        .modal-box .zalo-contact i {
+            margin-right: 8px;
+        }
+        .duration-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 12px 0 18px;
+        }
+        .duration-btn {
+            background: #1f2e3c;
+            border: 2px solid #2a4a5a;
+            color: #b0bec5;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-weight: 600;
+        }
+        .duration-btn:hover {
+            border-color: #4dd0e1;
+            color: #e0f2f1;
+            background: #2a3f4f;
+        }
+        .duration-btn.selected {
+            border-color: #f9a825;
+            color: #f9a825;
+            background: #2a2a1a;
+        }
+
+        @media (max-width:600px) {
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .left-section {
+                width: 100%;
+                justify-content: space-between;
+            }
+            .search-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .code-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .user-info {
+                justify-content: flex-start;
+            }
+            .music-hint {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="snowflakes" id="snowContainer"></div>
+    <button class="music-btn" id="musicToggle"><i class="fas fa-music"></i></button>
+    <div class="music-hint">🎵 "Em ở vùng quê" - Jack</div>
+    <audio id="bgMusic" loop>
+        <source src="https://cdn.jsdelivr.net/gh/ntkhang03/audio/em_o_vung_que.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container" id="mainContainer">
+        <div class="header">
+            <div class="left-section">
+                <div class="logo-area" id="logoArea">
+                    <div class="logo">longcheckmail <small>· dịch vụ</small></div>
+                    <div class="contact-mini"><i class="fas fa-phone-alt"></i> longcheckmail - 0344042462</div>
+                </div>
+                <div class="hamburger" id="hamburgerIcon">
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    <div class="hamburger-menu" id="hamburgerMenu"></div>
+                </div>
+                <div class="user-info" id="userInfo">
+                    <div class="avatar" id="userAvatar">L</div>
+                    <div class="user-name" id="userNameDisplay">longzz <small>· đã đăng nhập</small></div>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="lang-wrapper">
+                    <button class="lang-btn" id="langToggle"><i class="fas fa-globe"></i> <span id="currentLangLabel">Tiếng Việt</span> <i class="fas fa-chevron-down"></i></button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <div class="lang-option active-lang" data-lang="vi">Tiếng Việt</div>
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="zh">中文</div>
+                    </div>
+                </div>
+                <button class="btn-outline btn-code hidden" id="codeToggle" onclick="toggleCode()"><i class="fas fa-key"></i> <span data-i18n="code_btn">Code</span></button>
+                <button class="btn-outline btn-auth" id="showRegisterBtn" onclick="openModalById('registerModal')"><i class="fas fa-user-plus"></i> Đăng Ký</button>
+                <button class="btn-outline btn-auth" id="showLoginBtn" onclick="openModalById('loginModal')"><i class="fas fa-sign-in-alt"></i> Đăng Nhập</button>
+            </div>
+        </div>
+
+        <div class="code-section" id="codeSection">
+            <input type="text" id="codeInput" placeholder="Nhập mã key ..." />
+            <button class="btn-confirm" id="codeConfirm" onclick="handleCodeConfirm()"><span data-i18n="confirm_btn">Xác nhận</span></button>
+        </div>
+
+        <div class="search-box hidden" id="searchBox">
+            <input type="text" id="searchInput" placeholder="Nhập token ..." />
+            <select id="regionSelect">
+                <option value="vn">VN</option>
+                <option value="bd" selected>BD</option>
+                <option value="pk">PK</option>
+                <option value="ind">IND</option>
+                <option value="br">BR</option>
+                <option value="sg">SG</option>
+                <option value="us">US</option>
+                <option value="ru">RU</option>
+                <option value="th">TH</option>
+            </select>
+            <button class="btn-check" id="btnCheck" onclick="handleCheckToken()"><i class="fas fa-search"></i> <span data-i18n="check_btn">Check</span></button>
+        </div>
+
+        <div class="search-result" id="searchResult"></div>
+
+        <div class="service-grid" id="serviceGrid">
+            <div class="service-item" onclick="handleServiceClick(this)"><i class="fas fa-key"></i><span data-i18n="svc_log">Log acc qua token</span><span class="badge">0</span></div>
+            <div class="service-item" onclick="handleServiceClick(this)"><i class="fas fa-unlink"></i><span data-i18n="svc_unlink">Gỡ liên kết</span><span class="badge">0</span></div>
+            <div class="service-item" onclick="handleServiceClick(this)"><i class="fas fa-envelope"></i><span data-i18n="svc_mxt">Gắn/Gỡ Mail Xác Thực</span><span class="badge">0</span></div>
+            <div class="service-item" onclick="handleServiceClick(this)"><i class="fas fa-ban"></i><span data-i18n="svc_block">Chặn mã xác thực</span><span class="badge">0</span></div>
+            <div class="service-item" onclick="handleServiceClick(this)"><i class="fas fa-shield-alt"></i><span data-i18n="svc_spam">Spam login</span><span class="badge">0</span></div>
+            <div class="service-item" onclick="handleServiceClick(this)"><i class="fas fa-sms"></i><span data-i18n="svc_otp">Nhận mã OTP</span><span class="badge">0</span></div>
+            <div class="service-item" onclick="handleServiceClick(this)"><i class="fas fa-clock"></i><span data-i18n="svc_ban">Ban 7 ngày</span><span class="badge">0</span></div>
+        </div>
+
+        <div class="contact-row">
+            <span><i class="fas fa-phone-alt"></i> <span data-i18n="contact_label">Liên hệ:</span> <a href="#" id="footerContact">longcheckmail - 0344042462</a></span>
+            <span><i class="fas fa-shield-alt"></i> longcheckmail.com</span>
+        </div>
+    </div>
+
+    <!-- ===== MODALS ===== -->
+    <div class="overlay" id="loginModal">
+        <div class="modal-box">
+            <button class="close-modal" onclick="closeModalById('loginModal')">&times;</button>
+            <h2>Đăng Nhập</h2>
+            <p class="sub">Nhập Gmail hoặc tên đăng nhập</p>
+            <div class="input-group">
+                <label for="loginUser">Tên đăng nhập hoặc Gmail</label>
+                <input type="text" id="loginUser" placeholder="Nhập tên hoặc email" />
+            </div>
+            <div class="input-group">
+                <label for="loginPass">Mật khẩu</label>
+                <input type="password" id="loginPass" placeholder="Nhập mật khẩu" />
+            </div>
+            <div class="remember-group">
+                <input type="checkbox" id="remember" />
+                <label for="remember">Ghi Nhớ Tài Khoản</label>
+            </div>
+            <button class="btn-submit" onclick="handleLogin()">Đăng Nhập</button>
+            <div class="switch-link">
+                Bạn Chưa Có Tài Khoản? <a onclick="switchForm('loginModal','registerModal')">Đăng Ký</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="registerModal">
+        <div class="modal-box">
+            <button class="close-modal" onclick="closeModalById('registerModal')">&times;</button>
+            <h2>Đăng Ký</h2>
+            <p class="sub">Tạo tài khoản mới</p>
+            <div class="input-group">
+                <label for="regUser">Tên đăng nhập (không dấu, ≤12 ký tự)</label>
+                <input type="text" id="regUser" placeholder="Chọn tên đăng nhập" maxlength="12" />
+                <div class="error-msg" id="regUserError"></div>
+            </div>
+            <div class="input-group">
+                <label for="regGmail">Gmail (thật)</label>
+                <input type="email" id="regGmail" placeholder="Nhập Gmail của bạn" />
+                <div class="error-msg" id="regGmailError"></div>
+            </div>
+            <div class="input-group">
+                <label for="regPass">Mật khẩu (≤10 ký tự, không viết hoa, không ký tự đặc biệt)</label>
+                <input type="password" id="regPass" placeholder="Nhập mật khẩu" maxlength="10" />
+            </div>
+            <div class="input-group">
+                <label for="regPass2">Nhập lại mật khẩu</label>
+                <input type="password" id="regPass2" placeholder="Nhập lại mật khẩu" maxlength="10" />
+            </div>
+            <button class="btn-submit" onclick="handleRegister()">Đăng Ký</button>
+            <div class="switch-link">
+                Bạn Đã Có Tài Khoản? <a onclick="switchForm('registerModal','loginModal')">Đăng Nhập</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="requireKeyModal">
+        <div class="modal-box">
+            <button class="close-modal" onclick="closeModalById('requireKeyModal')">&times;</button>
+            <i class="fas fa-lock" style="font-size:3.5rem;color:#f9a825;margin-bottom:12px;"></i>
+            <h2>🔑 Bạn chưa có key</h2>
+            <p class="sub">Vui lòng nhập key để mở khóa tính năng.</p>
+            <div class="input-group">
+                <label for="keyInput">Nhập key</label>
+                <input type="text" id="keyInput" placeholder="Ví dụ: ABCD-1234" />
+                <div class="error-msg" id="keyErrorMsg"></div>
+            </div>
+            <button class="btn-submit" onclick="handleActivateKeyFromModal()" style="background:#f9a825;color:#0b0e14;">Xác nhận</button>
+            <a class="zalo-contact" href="https://zalo.me/0344042462" target="_blank"><i class="fas fa-comment"></i> Liên hệ Zalo</a>
+        </div>
+    </div>
+
+    <div class="overlay" id="keyErrorModal">
+        <div class="modal-box">
+            <button class="close-modal" onclick="closeModalById('keyErrorModal')">&times;</button>
+            <i class="fas fa-times-circle" style="font-size:3.5rem;color:#f44336;margin-bottom:12px;"></i>
+            <h2>❌ Key sai hoặc đã có người dùng</h2>
+            <p>Vui lòng kiểm tra lại key hoặc liên hệ admin.</p>
+            <a class="zalo-contact" href="https://zalo.me/0344042462" target="_blank"><i class="fas fa-comment"></i> Liên hệ Zalo</a>
+        </div>
+    </div>
+
+    <div class="overlay" id="createKeyModal">
+        <div class="modal-box">
+            <button class="close-modal" onclick="closeModalById('createKeyModal')">&times;</button>
+            <i class="fas fa-key" style="font-size:3.5rem;color:#4dd0e1;margin-bottom:12px;"></i>
+            <h2>🔑 Tạo key mới</h2>
+            <p class="sub">Chọn thời hạn hiệu lực</p>
+            <div class="duration-group" id="durationGroup">
+                <button class="duration-btn selected" data-duration="3ngay" onclick="selectDuration('3ngay')">3 ngày</button>
+                <button class="duration-btn" data-duration="5thang" onclick="selectDuration('5thang')">5 tháng</button>
+                <button class="duration-btn" data-duration="vinhvien" onclick="selectDuration('vinhvien')">Vĩnh viễn</button>
+            </div>
+            <button class="btn-submit" onclick="handleGenerateKey()" style="background:#f9a825;color:#0b0e14;">Tạo key</button>
+            <div class="key-display" id="newKeyDisplay" style="display:none;">ABCD-1234</div>
+            <p id="keyExpiryInfo" style="font-size:0.8rem;color:#78909c;margin-top:6px;"></p>
+            <button class="btn-submit" id="copyKeyBtn" style="display:none;background:#4dd0e1;color:#0b0e14;margin-top:10px;" onclick="copyKey()">Sao chép key</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="modalOverlay">
+        <div class="modal-box">
+            <button class="close-modal" onclick="closeModalById('modalOverlay')">&times;</button>
+            <i class="fas fa-lock" style="font-size:3.5rem;color:#f9a825;margin-bottom:12px;"></i>
+            <h2>⚠️ Phải mua key</h2>
+            <p>Bạn cần mua key để sử dụng tính năng này.</p>
+            <a class="zalo-contact" href="https://zalo.me/0344042462" target="_blank"><i class="fas fa-comment"></i> Liên hệ Zalo</a>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        "use strict";
+
+        function openModalById(id) {
+            var modal = document.getElementById(id);
+            if (modal) modal.classList.add('active');
+            playClickSound();
+        }
+
+        function closeModalById(id) {
+            var modal = document.getElementById(id);
+            if (modal) modal.classList.remove('active');
+            playClickSound();
+        }
+
+        function switchForm(closeId, openId) {
+            closeModalById(closeId);
+            openModalById(openId);
+        }
+
+        function playClickSound() {
+            try {
+                var ctx = new(window.AudioContext || window.webkitAudioContext)();
+                var osc = ctx.createOscillator();
+                var gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.frequency.value = 600;
+                osc.type = 'sine';
+                gain.gain.setValueAtTime(0.12, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.08);
+                osc.start(ctx.currentTime);
+                osc.stop(ctx.currentTime + 0.08);
+            } catch (e) {}
+        }
+
+        function getUsers() {
+            try { return JSON.parse(localStorage.getItem('users')) || {}; } catch (e) { return {}; }
+        }
+
+        function saveUsers(users) {
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+
+        function getCurrentUser() {
+            try { return JSON.parse(localStorage.getItem('currentUser')) || null; } catch (e) { return null; }
+        }
+
+        function setCurrentUser(username) {
+            if (username) {
+                localStorage.setItem('currentUser', JSON.stringify({ username: username }));
+            } else {
+                localStorage.removeItem('currentUser');
+            }
+            updateUI();
+        }
+
+        function getDeviceId() {
+            var id = localStorage.getItem('deviceId');
+            if (!id) {
+                id = 'dev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                localStorage.setItem('deviceId', id);
+            }
+            return id;
+        }
+        var deviceId = getDeviceId();
+
+        function getKeys() {
+            try { return JSON.parse(localStorage.getItem('keys')) || {}; } catch (e) { return {}; }
+        }
+
+        function saveKeys(keys) {
+            localStorage.setItem('keys', JSON.stringify(keys));
+        }
+
+        function getActivatedKey() {
+            try { return JSON.parse(localStorage.getItem('activatedKey')) || null; } catch (e) { return null; }
+        }
+
+        function setActivatedKey(key) {
+            if (key) {
+                localStorage.setItem('activatedKey', JSON.stringify({ key: key }));
+            } else {
+                localStorage.removeItem('activatedKey');
+            }
+            updateUI();
+        }
+
+        function isKeyActive() {
+            var user = getCurrentUser();
+            if (!user) return false;
+            var activated = getActivatedKey();
+            if (!activated) return false;
+            var keys = getKeys();
+            var keyData = keys[activated.key];
+            if (!keyData) return false;
+            if (keyData.expiry && keyData.expiry !== 'forever' && Date.now() > keyData.expiry) {
+                setActivatedKey(null);
+                return false;
+            }
+            if (keyData.deviceId && keyData.deviceId !== deviceId) {
+                setActivatedKey(null);
+                return false;
+            }
+            return true;
+        }
+
+        function activateKey(key, username) {
+            var keys = getKeys();
+            if (!keys[key]) return { success: false, error: 'invalid' };
+            var keyData = keys[key];
+            if (keyData.deviceId && keyData.deviceId !== deviceId) {
+                return { success: false, error: 'used_device' };
+            }
+            if (!keyData.deviceId) keyData.deviceId = deviceId;
+            if (keyData.expiry && keyData.expiry !== 'forever' && Date.now() > keyData.expiry) {
+                return { success: false, error: 'expired' };
+            }
+            saveKeys(keys);
+            setActivatedKey(key);
+            return { success: true };
+        }
+
+        function isValidUsername(name) { return /^[a-z0-9]{1,12}$/.test(name); }
+
+        function isValidGmail(email) { return /^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email); }
+
+        function isValidPassword(pass) { return /^[a-z0-9]{1,10}$/.test(pass); }
+
+        function registerUser(username, gmail, password) {
+            var users = getUsers();
+            if (users[username]) return { success: false, error: 'username' };
+            for (var key in users) {
+                if (users[key].gmail === gmail) return { success: false, error: 'gmail' };
+            }
+            users[username] = { gmail: gmail, password: password };
+            saveUsers(users);
+            return { success: true };
+        }
+
+        function loginUser(identifier, password) {
+            var users = getUsers();
+            var foundUser = null;
+            if (users[identifier] && users[identifier].password === password) {
+                foundUser = identifier;
+            } else {
+                for (var key in users) {
+                    if (users[key].gmail === identifier && users[key].password === password) {
+                        foundUser = key;
+                        break;
+                    }
+                }
+            }
+            if (foundUser) {
+                setCurrentUser(foundUser);
+                return { success: true };
+            }
+            return { success: false };
+        }
+
+        function handleLogin() {
+            var identifier = document.getElementById('loginUser').value.trim();
+            var pass = document.getElementById('loginPass').value.trim();
+            if (!identifier || !pass) {
+                alert('Vui lòng nhập đầy đủ thông tin.');
+                return;
+            }
+            var result = loginUser(identifier, pass);
+            if (result.success) {
+                closeModalById('loginModal');
+                document.getElementById('loginUser').value = '';
+                document.getElementById('loginPass').value = '';
+                alert('Đăng nhập thành công!');
+                updateUI();
+            } else {
+                alert('Sai tên đăng nhập/Gmail hoặc mật khẩu!');
+            }
+        }
+
+        function handleRegister() {
+            var username = document.getElementById('regUser').value.trim();
+            var gmail = document.getElementById('regGmail').value.trim();
+            var pass = document.getElementById('regPass').value.trim();
+            var pass2 = document.getElementById('regPass2').value.trim();
+
+            document.getElementById('regUserError').textContent = '';
+            document.getElementById('regGmailError').textContent = '';
+
+            var hasError = false;
+            if (!username) {
+                document.getElementById('regUserError').textContent = 'Vui lòng nhập tên';
+                hasError = true;
+            } else if (!isValidUsername(username)) {
+                document.getElementById('regUserError').textContent = 'Tên không hợp lệ';
+                hasError = true;
+            }
+            if (!gmail) {
+                document.getElementById('regGmailError').textContent = 'Vui lòng nhập Gmail';
+                hasError = true;
+            } else if (!isValidGmail(gmail)) {
+                document.getElementById('regGmailError').textContent = 'Gmail không hợp lệ';
+                hasError = true;
+            }
+            if (!pass) {
+                alert('Vui lòng nhập mật khẩu');
+                hasError = true;
+            } else if (!isValidPassword(pass)) {
+                alert('Mật khẩu không hợp lệ');
+                hasError = true;
+            }
+            if (pass !== pass2) {
+                alert('Mật khẩu nhập lại không khớp');
+                hasError = true;
+            }
+            if (hasError) return;
+
+            var result = registerUser(username, gmail, pass);
+            if (!result.success) {
+                if (result.error === 'username') {
+                    document.getElementById('regUserError').textContent = 'Tên đã bị trùng';
+                } else if (result.error === 'gmail') {
+                    document.getElementById('regGmailError').textContent = 'Gmail đã được sử dụng';
+                }
+                return;
+            }
+            alert('Đăng ký thành công! Vui lòng đăng nhập.');
+            closeModalById('registerModal');
+            openModalById('loginModal');
+            document.getElementById('loginUser').value = username;
+            document.getElementById('loginPass').value = '';
+        }
+
+        function toggleCode() {
+            var sec = document.getElementById('codeSection');
+            if (sec.style.display === 'flex') {
+                sec.style.display = 'none';
+                sec.classList.remove('visible');
+            } else {
+                sec.style.display = 'flex';
+                sec.classList.add('visible');
+            }
+            playClickSound();
+        }
+
+        function handleCodeConfirm() {
+            var val = document.getElementById('codeInput').value.trim().toUpperCase();
+            if (!val) { alert('Vui lòng nhập key!'); return; }
+            var user = getCurrentUser();
+            if (!user) { alert('Vui lòng đăng nhập trước!'); return; }
+            var result = activateKey(val, user.username);
+            if (result.success) {
+                document.getElementById('codeInput').value = '';
+                alert('Kích hoạt key thành công!');
+                var sec = document.getElementById('codeSection');
+                sec.style.display = 'none';
+                sec.classList.remove('visible');
+                updateUI();
+            } else {
+                var msg = result.error === 'invalid' ? 'Key không tồn tại!' :
+                    result.error === 'used_device' ? 'Key đã được kích hoạt trên thiết bị khác!' :
+                    result.error === 'expired' ? 'Key đã hết hạn!' : 'Key sai!';
+                alert(msg);
+                openModalById('keyErrorModal');
+            }
+        }
+
+        function handleActivateKeyFromModal() {
+            var key = document.getElementById('keyInput').value.trim().toUpperCase();
+            if (!key) { document.getElementById('keyErrorMsg').textContent = 'Vui lòng nhập key!'; return; }
+            var user = getCurrentUser();
+            if (!user) { alert('Vui lòng đăng nhập trước!'); return; }
+            var result = activateKey(key, user.username);
+            if (result.success) {
+                closeModalById('requireKeyModal');
+                document.getElementById('keyInput').value = '';
+                document.getElementById('keyErrorMsg').textContent = '';
+                alert('Kích hoạt key thành công!');
+                updateUI();
+            } else {
+                var msg = result.error === 'invalid' ? 'Key không tồn tại!' :
+                    result.error === 'used_device' ? 'Key đã được kích hoạt trên thiết bị khác!' :
+                    result.error === 'expired' ? 'Key đã hết hạn!' : 'Key sai!';
+                document.getElementById('keyErrorMsg').textContent = msg;
+                openModalById('keyErrorModal');
+            }
+        }
+
+        function handleServiceClick(el) {
+            var user = getCurrentUser();
+            if (!user) {
+                alert('Vui lòng đăng nhập trước!');
+                return;
+            }
+            if (!isKeyActive()) {
+                openModalById('requireKeyModal');
+                return;
+            }
+            var name = el.querySelector('span') ? el.querySelector('span').textContent : 'dịch vụ';
+            alert('Chức năng "' + name + '" đã được mở khóa!');
+        }
+
+        function handleCheckToken() {
+            var user = getCurrentUser();
+            if (!user) {
+                alert('Vui lòng đăng nhập trước!');
+                return;
+            }
+            if (!isKeyActive()) {
+                openModalById('requireKeyModal');
+                return;
+            }
+            var input = document.getElementById('searchInput').value.trim();
+            var resultDiv = document.getElementById('searchResult');
+            if (!input) {
+                resultDiv.className = 'search-result active';
+                resultDiv.innerHTML = '<div class="error-msg">Vui lòng nhập token!</div>';
+                return;
+            }
+            resultDiv.className = 'search-result active';
+            resultDiv.innerHTML = '<div class="loading-text"><i class="fas fa-spinner fa-spin"></i> Đang tra cứu...</div>';
+            setTimeout(function() {
+                resultDiv.innerHTML = '<div class="info-msg"><i class="fas fa-check-circle"></i> Token hợp lệ! (Demo)</div>';
+            }, 1000);
+        }
+
+        var selectedDuration = '3ngay';
+
+        function selectDuration(duration) {
+            selectedDuration = duration;
+            document.querySelectorAll('.duration-btn').forEach(function(b) {
+                b.classList.toggle('selected', b.dataset.duration === duration);
+            });
+            playClickSound();
+        }
+
+        function handleGenerateKey() {
+            var user = getCurrentUser();
+            if (!user || user.username !== 'longdz123') {
+                alert('Bạn không có quyền tạo key!');
+                return;
+            }
+            var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            var key = '';
+            for (var i = 0; i < 8; i++) {
+                key += chars.charAt(Math.floor(Math.random() * chars.length));
+                if (i === 3) key += '-';
+            }
+            var expiry = null,
+                label = '';
+            if (selectedDuration === '3ngay') {
+                expiry = Date.now() + 3 * 24 * 60 * 60 * 1000;
+                label = '3 ngày';
+            } else if (selectedDuration === '5thang') {
+                expiry = Date.now() + 5 * 30 * 24 * 60 * 60 * 1000;
+                label = '5 tháng';
+            } else if (selectedDuration === 'vinhvien') {
+                expiry = 'forever';
+                label = 'Vĩnh viễn';
+            }
+            var keys = getKeys();
+            keys[key] = {
+                expiry: expiry,
+                duration: selectedDuration,
+                deviceId: null,
+                createdAt: Date.now()
+            };
+            saveKeys(keys);
+            document.getElementById('newKeyDisplay').textContent = key;
+            document.getElementById('newKeyDisplay').style.display = 'block';
+            document.getElementById('copyKeyBtn').style.display = 'inline-block';
+            document.getElementById('keyExpiryInfo').textContent = '⏳ Hiệu lực: ' + label;
+            playClickSound();
+        }
+
+        function copyKey() {
+            var key = document.getElementById('newKeyDisplay').textContent;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(key).then(function() {
+                    alert('Đã sao chép key: ' + key);
+                }).catch(function() {
+                    alert('Không thể sao chép, hãy copy thủ công.');
+                });
+            } else {
+                alert('Không hỗ trợ sao chép.');
+            }
+            playClickSound();
+        }
+
+        function updateUI() {
+            var user = getCurrentUser();
+            var logoArea = document.getElementById('logoArea');
+            var hamburgerIcon = document.getElementById('hamburgerIcon');
+            var userInfo = document.getElementById('userInfo');
+            var userAvatar = document.getElementById('userAvatar');
+            var userNameDisplay = document.getElementById('userNameDisplay');
+            var showRegisterBtn = document.getElementById('showRegisterBtn');
+            var showLoginBtn = document.getElementById('showLoginBtn');
+            var codeToggle = document.getElementById('codeToggle');
+            var codeSection = document.getElementById('codeSection');
+            var searchBox = document.getElementById('searchBox');
+
+            if (user) {
+                logoArea.classList.add('hidden');
+                hamburgerIcon.classList.add('visible');
+                userInfo.classList.add('visible');
+                userAvatar.textContent = user.username.charAt(0).toUpperCase();
+                userNameDisplay.innerHTML = user.username + ' <small>· đã đăng nhập</small>';
+                showRegisterBtn.classList.add('hidden');
+                showLoginBtn.classList.add('hidden');
+                codeToggle.classList.remove('hidden');
+                searchBox.classList.remove('hidden');
+                buildHamburgerMenu(user.username);
+            } else {
+                logoArea.classList.remove('hidden');
+                hamburgerIcon.classList.remove('visible');
+                userInfo.classList.remove('visible');
+                showRegisterBtn.classList.remove('hidden');
+                showLoginBtn.classList.remove('hidden');
+                codeToggle.classList.add('hidden');
+                codeSection.classList.remove('visible');
+                codeSection.style.display = 'none';
+                searchBox.classList.add('hidden');
+            }
+        }
+
+        function buildHamburgerMenu(username) {
+            var menu = document.getElementById('hamburgerMenu');
+            menu.innerHTML = '';
+            if (getActivatedKey() !== null) {
+                var unlinkKey = document.createElement('button');
+                unlinkKey.className = 'menu-item unlink-key';
+                unlinkKey.innerHTML = '<i class="fas fa-unlink"></i> Hủy Key';
+                unlinkKey.onclick = function(e) {
+                    e.stopPropagation();
+                    if (confirm('Hủy key trên thiết bị này?')) {
+                        setActivatedKey(null);
+                        document.getElementById('hamburgerMenu').classList.remove('active');
+                        alert('Đã hủy key.');
+                        updateUI();
+                    }
+                };
+                menu.appendChild(unlinkKey);
+            }
+            var logout = document.createElement('button');
+            logout.className = 'menu-item logout';
+            logout.innerHTML = '<i class="fas fa-sign-out-alt"></i> Đăng Xuất';
+            logout.onclick = function(e) {
+                e.stopPropagation();
+                setCurrentUser(null);
+                document.getElementById('hamburgerMenu').classList.remove('active');
+                alert('Đã đăng xuất.');
+            };
+            menu.appendChild(logout);
+            if (username === 'longdz123') {
+                var keyItem = document.createElement('button');
+                keyItem.className = 'menu-item key';
+                keyItem.innerHTML = '<i class="fas fa-key"></i> Tạo Key';
+                keyItem.onclick = function(e) {
+                    e.stopPropagation();
+                    document.getElementById('hamburgerMenu').classList.remove('active');
+                    openModalById('createKeyModal');
+                };
+                menu.insertBefore(keyItem, logout);
+            }
+        }
+
+        var translations = {
+            vi: {
+                code_btn: "Code",
+                confirm_btn: "Xác nhận",
+                check_btn: "Check",
+                contact_label: "Liên hệ:",
+                search_placeholder: "Nhập token ...",
+                svc_log: "Log acc qua token",
+                svc_unlink: "Gỡ liên kết",
+                svc_mxt: "Gắn/Gỡ Mail Xác Thực",
+                svc_block: "Chặn mã xác thực",
+                svc_spam: "Spam login",
+                svc_otp: "Nhận mã OTP",
+                svc_ban: "Ban 7 ngày",
+            }
+        };
+
+        function applyLanguage(lang) {
+            if (!translations[lang]) return;
+            var t = translations[lang];
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) el.innerHTML = t[key];
+            });
+            var searchInput = document.getElementById('searchInput');
+            if (t.search_placeholder) searchInput.placeholder = t.search_placeholder;
+            var langNames = { vi: 'Tiếng Việt', en: 'English', zh: '中文' };
+            document.getElementById('currentLangLabel').textContent = langNames[lang] || lang;
+            document.querySelectorAll('.lang-option').forEach(function(opt) {
+                opt.classList.toggle('active-lang', opt.dataset.lang === lang);
+            });
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+
+        function init() {
+            var users = getUsers();
+            if (!users['longdz123']) {
+                users['longdz123'] = { gmail: 'longdz123@gmail.com', password: '3102012' };
+                saveUsers(users);
+            }
+            var keys = getKeys();
+            if (Object.keys(keys).length === 0) {
+                var demoKey = 'DEMO-1234';
+                keys[demoKey] = { expiry: 'forever', duration: 'vinhvien', deviceId: null, createdAt: Date.now() };
+                saveKeys(keys);
+                console.log('Key demo:', demoKey);
+            }
+            updateUI();
+
+            var langToggle = document.getElementById('langToggle');
+            if (langToggle) {
+                langToggle.onclick = function(e) {
+                    e.stopPropagation();
+                    document.getElementById('langDropdown').classList.toggle('active');
+                    playClickSound();
+                };
+            }
+            document.querySelectorAll('.lang-option').forEach(function(opt) {
+                opt.onclick = function() {
+                    applyLanguage(this.dataset.lang);
+                    document.getElementById('langDropdown').classList.remove('active');
+                    playClickSound();
+                };
+            });
+            document.onclick = function() {
+                document.getElementById('langDropdown').classList.remove('active');
+            };
+
+            var hamburgerIcon = document.getElementById('hamburgerIcon');
+            if (hamburgerIcon) {
+                hamburgerIcon.onclick = function(e) {
+                    e.stopPropagation();
+                    var menu = document.getElementById('hamburgerMenu');
+                    menu.classList.toggle('active');
+                    playClickSound();
+                };
+            }
+
+            document.getElementById('loginPass').onkeypress = function(e) {
+                if (e.key === 'Enter') handleLogin();
+            };
+            document.getElementById('regPass2').onkeypress = function(e) {
+                if (e.key === 'Enter') handleRegister();
+            };
+
+            console.log('[longcheckmail] Đã sẵn sàng!');
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+
+        document.addEventListener('click', function(e) {
+            var target = e.target.closest('button, .card-btn, .service-item, .lang-btn, .btn-outline, .btn-confirm, .close-modal, .menu-item, .btn-submit, .hamburger, .duration-btn, .zalo-contact');
+            if (target) playClickSound();
+        });
+    </script>
+</body>
+</html>
